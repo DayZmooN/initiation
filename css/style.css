@@ -2,16 +2,22 @@
     margin:0;
     padding: 0;
 }
-
+a{
+    text-decoration: none;
+}
 #menu {
     width: 1200px;
     height: 50px;
     margin: 0 auto;
 }
+#menu li {
+    list-style-type: none;
+}
 
 #menu > ul > li {
     float: left;
     list-style-type: none;
+    position: relative;
 
 }
 #menu > ul > li > a {
@@ -30,4 +36,22 @@
     background-color: red;
     border-bottom:  2px solid #000;
     
+}
+
+#menu > ul > li > ul{
+    display: none;
+    position:absolute;
+    left: 0;
+    top:100%;
+    background-color:#ccc;
+}
+#menu > ul > li > ul > li > a{
+    display: block;
+    height: 30px;
+    width: 150px;
+    padding: 0 5px;
+    text-align: center;
+}
+#menu > ul > li:hover > ul{
+    display: block;
 }
